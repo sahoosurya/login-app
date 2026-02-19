@@ -56,7 +56,7 @@ pipeline {
                 sh '''
                 NODE_IP=$(kubectl get nodes -o jsonpath='{.items[0].status.addresses[0].address}')
                 echo "Application URL:"
-                echo "http://$NODE_IP:30007"
+                echo "http://$NODE_IP:30009"
                 '''
             }
         }
