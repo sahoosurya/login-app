@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "manishbadgujar/login-app:latest"
+        DOCKER_IMAGE = "surysaho/login-app:latest"
     }
 
     stages {
@@ -28,7 +28,7 @@ pipeline {
         stage('Docker Push') {
             steps {
                 withCredentials([usernamePassword(
-                    credentialsId: 'dockerhub-creds',
+                    credentialsId: 'suryasaho-docker',
                     usernameVariable: 'USER',
                     passwordVariable: 'PASS'
                 )]) {
