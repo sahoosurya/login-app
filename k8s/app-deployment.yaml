@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: login-app
-        image: manishbadgujar/login-app:latest
+        image: suryasaho/login-app:latest
         ports:
         - containerPort: 8080
 
