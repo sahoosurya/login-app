@@ -43,10 +43,7 @@ pipeline {
         stage('Create a Namespace') {
             steps {
                 sh '''
-                kubectl apply -f k8s/namespace.yaml
-                '''
-                sh '''
-                kubectl apply -f k8s/
+                kubectl apply -f k8s/namespace.yaml k8/
                 '''
             }
         }
