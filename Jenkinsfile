@@ -51,6 +51,17 @@ pipeline {
             }
         }
 
+        stage('Pod status') {
+            steps {
+                sh '''
+                sleep 10 
+                '''
+                sh '''
+                kubectl get po -n surya 
+                '''
+            }
+        }
+
         stage('Print URL') {
             steps {
                 sh '''
